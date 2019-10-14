@@ -39,7 +39,11 @@ class ListaTransferenciaState extends State<ListaDeTransferencias> {
           );
 
           future.then((newTransferencia) {
-            widget._list.add(newTransferencia);
+            if (newTransferencia != null) {
+              setState(() {
+                widget._list.add(newTransferencia);
+              });
+            }
           });
         },
       ),
