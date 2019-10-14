@@ -4,22 +4,11 @@ import 'package:flutter_app/widgets/lista_transferencias.dart';
 void main() => runApp(
       MaterialApp(
         theme: ThemeData(
-          primaryColor: Colors.green[900],
-          accentColor: Colors.blueAccent[700],
-          buttonTheme:  ButtonThemeData(
-            buttonColor: Colors.blueAccent[700],
-            textTheme: ButtonTextTheme.primary
-          )
-        ),
-        home: HomePage(),
+            primaryColor: Colors.green[900],
+            accentColor: Colors.blueAccent[700],
+            buttonTheme: ButtonThemeData(
+                buttonColor: Colors.blueAccent[700],
+                textTheme: ButtonTextTheme.primary)),
+        home: ListaDeTransferencias(),
       ),
     );
-
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListaDeTransferencias(),
-    );
-  }
-}
